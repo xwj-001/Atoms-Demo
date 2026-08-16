@@ -1,0 +1,299 @@
+2026-08-15 22:43:58,410 - main - INFO - === Logging system initialized ===
+2026-08-15 22:43:58,410 - main - INFO - Log file: logs/app_20260815.log
+2026-08-15 22:43:58,410 - main - INFO - Log level: DEBUG
+2026-08-15 22:43:58,411 - main - INFO - Log date: 20260815
+2026-08-15 22:43:59,242 - main - INFO - Included router: routers.aihub.router
+2026-08-15 22:43:59,435 - main - INFO - Included router: routers.auth.router
+2026-08-15 22:43:59,472 - main - INFO - Included router: routers.health.router
+2026-08-15 22:43:59,517 - main - INFO - Included router: routers.settings.router
+2026-08-15 22:43:59,591 - main - INFO - Included router: routers.storage.router
+2026-08-15 22:43:59,843 - main - INFO - Included router: routers.user.router
+2026-08-15 22:43:59,844 - main - INFO - === Application startup initiated ===
+2026-08-15 22:43:59,844 - services.database - INFO - Ignore database initialization
+2026-08-15 22:43:59,844 - services.mock_data - INFO - Ignore initialize data
+2026-08-15 22:43:59,844 - services.auth - INFO - Ignore initialize admin
+2026-08-15 22:43:59,844 - main - INFO - === Application startup completed successfully ===
+2026-08-15 22:44:16,552 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-08-15 22:44:16,552 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-08-15 22:44:16,552 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-08-15 22:44:16,552 - core.database - INFO - Starting database initialization...
+2026-08-15 22:44:16,552 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-08-15 22:44:16,553 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-08-15 22:44:16,553 - core.database - INFO - Creating async database engine...
+2026-08-15 22:44:16,553 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-08-15 22:44:16,625 - core.database - INFO - Database engine created successfully
+2026-08-15 22:44:16,625 - core.database - INFO - Creating async session maker...
+2026-08-15 22:44:16,625 - core.database - INFO - Async session maker created successfully
+2026-08-15 22:44:16,625 - core.database - INFO - Database connection initialized successfully
+2026-08-15 22:44:16,625 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-08-15 22:44:16,626 - core.database - INFO - 🔧 Starting table creation...
+2026-08-15 22:44:17,538 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-08-15 22:44:17,539 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0005s
+2026-08-15 22:44:17,539 - routers.auth - INFO - [token/exchange] Received platform token exchange request
+2026-08-15 22:44:17,540 - core.config - DEBUG - Read dynamic attribute oidc_issuer_url from environment variable OIDC_ISSUER_URL
+2026-08-15 22:44:17,540 - routers.auth - DEBUG - [token/exchange] Verifying token with issuer: https://auth.atoms.dev/api/v1/oidc/platform/tokens/verify
+2026-08-15 22:44:17,762 - httpcore.connection - DEBUG - connect_tcp.started host='auth.atoms.dev' port=443 local_address=None timeout=5.0 socket_options=None
+2026-08-15 22:44:17,770 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f6a105dd1e0>
+2026-08-15 22:44:17,771 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7f6a12839a40> server_hostname='auth.atoms.dev' timeout=5.0
+2026-08-15 22:44:17,781 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f6a105dd120>
+2026-08-15 22:44:17,782 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-08-15 22:44:17,782 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-08-15 22:44:17,783 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-08-15 22:44:17,783 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-08-15 22:44:17,783 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-08-15 22:44:17,871 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 16 Aug 2026 05:44:17 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'a2be20572b4f1268-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Server', b'cloudflare'), (b'x-mgx-request-id', b'269316f68ea77ff8b8c5ed9432bd7124'), (b'x-request-id', b'269316f68ea77ff8b8c5ed9432bd7124'), (b'x-response-time', b'0.001s'), (b'Content-Encoding', b'gzip')])
+2026-08-15 22:44:17,872 - httpx - INFO - HTTP Request: POST https://auth.atoms.dev/api/v1/oidc/platform/tokens/verify "HTTP/1.1 200 OK"
+2026-08-15 22:44:17,872 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-08-15 22:44:17,873 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-08-15 22:44:17,873 - httpcore.http11 - DEBUG - response_closed.started
+2026-08-15 22:44:17,873 - httpcore.http11 - DEBUG - response_closed.complete
+2026-08-15 22:44:17,873 - httpcore.connection - DEBUG - close.started
+2026-08-15 22:44:17,874 - httpcore.connection - DEBUG - close.complete
+2026-08-15 22:44:17,874 - routers.auth - DEBUG - [token/exchange] Issuer response status: 200
+2026-08-15 22:44:17,874 - routers.auth - DEBUG - [token/exchange] Issuer response body: {'success': True, 'data': {'email': '786728790@qq.com', 'exp': 1789271541, 'iat': 1786679541, 'pv': 0, 'user_id': 1533223}, 'message': 'Platform token verified', 'code': 0, 'timestamp': '2026-08-16T13:44:17.857574'}
+2026-08-15 22:44:17,874 - routers.auth - INFO - [token/exchange] Token verified, platform_user_id=1533223, email=786728790@qq.com
+2026-08-15 22:44:17,874 - core.config - DEBUG - Read dynamic attribute admin_user_id from environment variable ADMIN_USER_ID
+2026-08-15 22:44:17,874 - routers.auth - INFO - [token/exchange] User verified: platform_user_id=1533223, role=admin
+2026-08-15 22:44:17,876 - routers.auth - DEBUG - [token/exchange] User object for token issuance: id=1533223, email=786728790@qq.com, role=admin
+2026-08-15 22:44:17,876 - core.config - DEBUG - Read dynamic attribute jwt_expire_minutes from environment variable JWT_EXPIRE_MINUTES
+2026-08-15 22:44:17,876 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-08-15 22:44:17,876 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-08-15 22:44:17,882 - core.auth - DEBUG - Authentication token created for user hash: ca68562a
+2026-08-15 22:44:17,882 - routers.auth - INFO - [token/exchange] Token issued successfully for user_id=1533223, expires_at=2026-09-15 05:44:17.876531+00:00
+2026-08-15 22:44:17,883 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3444s
+2026-08-15 22:44:18,141 - core.database - INFO - Tables initialized successfully
+2026-08-15 22:44:18,141 - core.database - DEBUG - [DB_OP] Create tables completed in 1.5157s
+2026-08-15 22:44:18,204 - core.database - INFO - Lazy database initialization completed successfully
+2026-08-15 22:44:18,204 - core.database - DEBUG - [DB_OP] Database session created successfully in 1.6521s
+2026-08-15 22:44:18,204 - routers.auth - INFO - [token/exchange] Received platform token exchange request
+2026-08-15 22:44:18,204 - routers.auth - DEBUG - [token/exchange] Verifying token with issuer: https://auth.atoms.dev/api/v1/oidc/platform/tokens/verify
+2026-08-15 22:44:18,227 - httpcore.connection - DEBUG - connect_tcp.started host='auth.atoms.dev' port=443 local_address=None timeout=5.0 socket_options=None
+2026-08-15 22:44:18,244 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f6a104e9180>
+2026-08-15 22:44:18,245 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7f6a127b4dc0> server_hostname='auth.atoms.dev' timeout=5.0
+2026-08-15 22:44:18,257 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f6a104e90c0>
+2026-08-15 22:44:18,258 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-08-15 22:44:18,258 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-08-15 22:44:18,258 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-08-15 22:44:18,258 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-08-15 22:44:18,258 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-08-15 22:44:18,353 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 16 Aug 2026 05:44:18 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'a2be205a1dc4c4d5-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Server', b'cloudflare'), (b'x-mgx-request-id', b'0960cf81abf0bc6a6536af0538f88ca5'), (b'x-request-id', b'0960cf81abf0bc6a6536af0538f88ca5'), (b'x-response-time', b'0.001s'), (b'Content-Encoding', b'gzip')])
+2026-08-15 22:44:18,353 - httpx - INFO - HTTP Request: POST https://auth.atoms.dev/api/v1/oidc/platform/tokens/verify "HTTP/1.1 200 OK"
+2026-08-15 22:44:18,354 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-08-15 22:44:18,354 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-08-15 22:44:18,354 - httpcore.http11 - DEBUG - response_closed.started
+2026-08-15 22:44:18,355 - httpcore.http11 - DEBUG - response_closed.complete
+2026-08-15 22:44:18,355 - httpcore.connection - DEBUG - close.started
+2026-08-15 22:44:18,356 - httpcore.connection - DEBUG - close.complete
+2026-08-15 22:44:18,356 - routers.auth - DEBUG - [token/exchange] Issuer response status: 200
+2026-08-15 22:44:18,356 - routers.auth - DEBUG - [token/exchange] Issuer response body: {'success': True, 'data': {'email': '786728790@qq.com', 'exp': 1789271541, 'iat': 1786679541, 'pv': 0, 'user_id': 1533223}, 'message': 'Platform token verified', 'code': 0, 'timestamp': '2026-08-16T13:44:18.343630'}
+2026-08-15 22:44:18,356 - routers.auth - INFO - [token/exchange] Token verified, platform_user_id=1533223, email=786728790@qq.com
+2026-08-15 22:44:18,356 - routers.auth - INFO - [token/exchange] User verified: platform_user_id=1533223, role=admin
+2026-08-15 22:44:18,356 - routers.auth - DEBUG - [token/exchange] User object for token issuance: id=1533223, email=786728790@qq.com, role=admin
+2026-08-15 22:44:18,357 - core.auth - DEBUG - Authentication token created for user hash: ca68562a
+2026-08-15 22:44:18,357 - routers.auth - INFO - [token/exchange] Token issued successfully for user_id=1533223, expires_at=2026-09-15 05:44:18.356972+00:00
+2026-08-15 22:44:18,357 - core.database - DEBUG - [DB_OP] Database session cleanup after 1.8054s
+2026-08-15 22:59:35,895 - services.database - DEBUG - [DB_OP] Starting database close
+2026-08-15 22:59:35,896 - core.database - INFO - Database connection closed and engine disposed
+2026-08-15 22:59:35,896 - services.database - INFO - Database connections closed
+2026-08-15 22:59:35,897 - services.database - DEBUG - [DB_OP] Database close completed in 0.0013s
+2026-08-15 22:59:53,841 - main - INFO - === Logging system initialized ===
+2026-08-15 22:59:53,841 - main - INFO - Log file: logs/app_20260815.log
+2026-08-15 22:59:53,842 - main - INFO - Log level: DEBUG
+2026-08-15 22:59:53,842 - main - INFO - Log date: 20260815
+2026-08-15 22:59:53,958 - main - INFO - Included router: routers.aihub.router
+2026-08-15 22:59:53,977 - main - INFO - Included router: routers.auth.router
+2026-08-15 22:59:53,979 - main - INFO - Included router: routers.health.router
+2026-08-15 22:59:53,993 - main - INFO - Included router: routers.settings.router
+2026-08-15 22:59:54,060 - main - INFO - Included router: routers.storage.router
+2026-08-15 22:59:54,067 - main - INFO - Included router: routers.user.router
+2026-08-15 22:59:54,068 - main - INFO - === Application startup initiated ===
+2026-08-15 22:59:54,068 - services.database - INFO - Ignore database initialization
+2026-08-15 22:59:54,068 - services.mock_data - INFO - Ignore initialize data
+2026-08-15 22:59:54,069 - services.auth - INFO - Ignore initialize admin
+2026-08-15 22:59:54,070 - main - INFO - === Application startup completed successfully ===
+2026-08-15 22:59:55,381 - services.database - DEBUG - [DB_OP] Starting database close
+2026-08-15 22:59:55,381 - services.database - INFO - Database connections closed
+2026-08-15 22:59:55,381 - services.database - DEBUG - [DB_OP] Database close completed in 0.0005s
+2026-08-15 23:00:36,095 - main - INFO - === Logging system initialized ===
+2026-08-15 23:00:36,095 - main - INFO - Log file: logs/app_20260815.log
+2026-08-15 23:00:36,096 - main - INFO - Log level: DEBUG
+2026-08-15 23:00:36,096 - main - INFO - Log date: 20260815
+2026-08-15 23:00:36,192 - main - INFO - Included router: routers.aihub.router
+2026-08-15 23:00:36,203 - main - INFO - Included router: routers.auth.router
+2026-08-15 23:00:36,207 - main - INFO - Included router: routers.health.router
+2026-08-15 23:00:36,217 - main - INFO - Included router: routers.settings.router
+2026-08-15 23:00:36,245 - main - INFO - Included router: routers.storage.router
+2026-08-15 23:00:36,250 - main - INFO - Included router: routers.user.router
+2026-08-15 23:00:36,251 - main - INFO - === Application startup initiated ===
+2026-08-15 23:00:36,251 - services.database - INFO - Ignore database initialization
+2026-08-15 23:00:36,251 - services.mock_data - INFO - Ignore initialize data
+2026-08-15 23:00:36,251 - services.auth - INFO - Ignore initialize admin
+2026-08-15 23:00:36,251 - main - INFO - === Application startup completed successfully ===
+2026-08-15 23:21:33,754 - services.database - DEBUG - [DB_OP] Starting database close
+2026-08-15 23:21:33,755 - services.database - INFO - Database connections closed
+2026-08-15 23:21:33,755 - services.database - DEBUG - [DB_OP] Database close completed in 0.0004s
+2026-08-15 23:21:48,590 - main - INFO - === Logging system initialized ===
+2026-08-15 23:21:48,590 - main - INFO - Log file: logs/app_20260815.log
+2026-08-15 23:21:48,590 - main - INFO - Log level: DEBUG
+2026-08-15 23:21:48,590 - main - INFO - Log date: 20260815
+2026-08-15 23:21:48,686 - main - INFO - Included router: routers.aihub.router
+2026-08-15 23:21:48,698 - main - INFO - Included router: routers.auth.router
+2026-08-15 23:21:48,700 - main - INFO - Included router: routers.health.router
+2026-08-15 23:21:48,712 - main - INFO - Included router: routers.settings.router
+2026-08-15 23:21:48,732 - main - INFO - Included router: routers.storage.router
+2026-08-15 23:21:48,737 - main - INFO - Included router: routers.user.router
+2026-08-15 23:21:48,739 - main - INFO - === Application startup initiated ===
+2026-08-15 23:21:48,739 - services.database - INFO - Ignore database initialization
+2026-08-15 23:21:48,739 - services.mock_data - INFO - Ignore initialize data
+2026-08-15 23:21:48,740 - services.auth - INFO - Ignore initialize admin
+2026-08-15 23:21:48,740 - main - INFO - === Application startup completed successfully ===
+2026-08-15 23:21:50,063 - services.database - DEBUG - [DB_OP] Starting database close
+2026-08-15 23:21:50,063 - services.database - INFO - Database connections closed
+2026-08-15 23:21:50,063 - services.database - DEBUG - [DB_OP] Database close completed in 0.0004s
+2026-08-15 23:22:43,382 - main - INFO - === Logging system initialized ===
+2026-08-15 23:22:43,382 - main - INFO - Log file: logs/app_20260815.log
+2026-08-15 23:22:43,382 - main - INFO - Log level: DEBUG
+2026-08-15 23:22:43,382 - main - INFO - Log date: 20260815
+2026-08-15 23:22:43,485 - main - INFO - Included router: routers.aihub.router
+2026-08-15 23:22:43,496 - main - INFO - Included router: routers.auth.router
+2026-08-15 23:22:43,497 - main - INFO - Included router: routers.health.router
+2026-08-15 23:22:43,509 - main - INFO - Included router: routers.settings.router
+2026-08-15 23:22:43,531 - main - INFO - Included router: routers.storage.router
+2026-08-15 23:22:43,537 - main - INFO - Included router: routers.user.router
+2026-08-15 23:22:43,538 - main - INFO - === Application startup initiated ===
+2026-08-15 23:22:43,538 - services.database - INFO - Ignore database initialization
+2026-08-15 23:22:43,538 - services.mock_data - INFO - Ignore initialize data
+2026-08-15 23:22:43,538 - services.auth - INFO - Ignore initialize admin
+2026-08-15 23:22:43,539 - main - INFO - === Application startup completed successfully ===
+2026-08-15 23:33:23,858 - services.database - DEBUG - [DB_OP] Starting database close
+2026-08-15 23:33:23,859 - services.database - INFO - Database connections closed
+2026-08-15 23:33:23,859 - services.database - DEBUG - [DB_OP] Database close completed in 0.0004s
+2026-08-15 23:36:31,916 - main - INFO - === Logging system initialized ===
+2026-08-15 23:36:31,916 - main - INFO - Log file: logs/app_20260815.log
+2026-08-15 23:36:31,916 - main - INFO - Log level: DEBUG
+2026-08-15 23:36:31,917 - main - INFO - Log date: 20260815
+2026-08-15 23:36:32,205 - main - INFO - Included router: routers.aihub.router
+2026-08-15 23:36:32,217 - main - INFO - Included router: routers.auth.router
+2026-08-15 23:36:32,218 - main - INFO - Included router: routers.health.router
+2026-08-15 23:36:32,232 - main - INFO - Included router: routers.settings.router
+2026-08-15 23:36:32,255 - main - INFO - Included router: routers.storage.router
+2026-08-15 23:36:32,261 - main - INFO - Included router: routers.user.router
+2026-08-15 23:36:32,262 - main - INFO - === Application startup initiated ===
+2026-08-15 23:36:32,262 - services.database - INFO - Ignore database initialization
+2026-08-15 23:36:32,262 - services.mock_data - INFO - Ignore initialize data
+2026-08-15 23:36:32,263 - services.auth - INFO - Ignore initialize admin
+2026-08-15 23:36:32,263 - main - INFO - === Application startup completed successfully ===
+2026-08-15 23:51:36,813 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-08-15 23:52:41,951 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-08-15 23:52:45,984 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-08-15 23:52:45,984 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-08-15 23:52:45,990 - core.auth - DEBUG - Authentication token validated for user hash: ca68562a
+2026-08-15 23:53:10,633 - services.database - DEBUG - [DB_OP] Starting database close
+2026-08-15 23:53:10,633 - services.database - INFO - Database connections closed
+2026-08-15 23:53:10,633 - services.database - DEBUG - [DB_OP] Database close completed in 0.0003s
+2026-08-15 23:53:25,924 - main - INFO - === Logging system initialized ===
+2026-08-15 23:53:25,924 - main - INFO - Log file: logs/app_20260815.log
+2026-08-15 23:53:25,924 - main - INFO - Log level: DEBUG
+2026-08-15 23:53:25,924 - main - INFO - Log date: 20260815
+2026-08-15 23:53:26,027 - main - INFO - Included router: routers.aihub.router
+2026-08-15 23:53:26,070 - main - INFO - Included router: routers.auth.router
+2026-08-15 23:53:26,071 - main - INFO - Included router: routers.health.router
+2026-08-15 23:53:26,086 - main - INFO - Included router: routers.settings.router
+2026-08-15 23:53:26,107 - main - INFO - Included router: routers.storage.router
+2026-08-15 23:53:26,299 - main - INFO - Included router: routers.studio_apps.router
+2026-08-15 23:53:26,309 - main - INFO - Included router: routers.user.router
+2026-08-15 23:53:26,310 - main - INFO - === Application startup initiated ===
+2026-08-15 23:53:26,311 - services.database - INFO - Ignore database initialization
+2026-08-15 23:53:26,312 - services.mock_data - INFO - Ignore initialize data
+2026-08-15 23:53:26,312 - services.auth - INFO - Ignore initialize admin
+2026-08-15 23:53:26,313 - main - INFO - === Application startup completed successfully ===
+2026-08-15 23:53:28,636 - services.database - DEBUG - [DB_OP] Starting database close
+2026-08-15 23:53:28,636 - services.database - INFO - Database connections closed
+2026-08-15 23:53:28,636 - services.database - DEBUG - [DB_OP] Database close completed in 0.0003s
+2026-08-15 23:53:44,237 - main - INFO - === Logging system initialized ===
+2026-08-15 23:53:44,238 - main - INFO - Log file: logs/app_20260815.log
+2026-08-15 23:53:44,238 - main - INFO - Log level: DEBUG
+2026-08-15 23:53:44,238 - main - INFO - Log date: 20260815
+2026-08-15 23:53:44,355 - main - INFO - Included router: routers.aihub.router
+2026-08-15 23:53:44,368 - main - INFO - Included router: routers.auth.router
+2026-08-15 23:53:44,370 - main - INFO - Included router: routers.health.router
+2026-08-15 23:53:44,383 - main - INFO - Included router: routers.settings.router
+2026-08-15 23:53:44,405 - main - INFO - Included router: routers.storage.router
+2026-08-15 23:53:44,520 - main - INFO - Included router: routers.studio_apps.router
+2026-08-15 23:53:44,526 - main - INFO - Included router: routers.user.router
+2026-08-15 23:53:44,528 - main - INFO - === Application startup initiated ===
+2026-08-15 23:53:44,528 - services.database - INFO - Ignore database initialization
+2026-08-15 23:53:44,528 - services.mock_data - INFO - Ignore initialize data
+2026-08-15 23:53:44,528 - services.auth - INFO - Ignore initialize admin
+2026-08-15 23:53:44,528 - main - INFO - === Application startup completed successfully ===
+2026-08-15 23:53:45,332 - services.database - DEBUG - [DB_OP] Starting database close
+2026-08-15 23:53:45,332 - services.database - INFO - Database connections closed
+2026-08-15 23:53:45,332 - services.database - DEBUG - [DB_OP] Database close completed in 0.0005s
+2026-08-15 23:54:26,512 - main - INFO - === Logging system initialized ===
+2026-08-15 23:54:26,512 - main - INFO - Log file: logs/app_20260815.log
+2026-08-15 23:54:26,512 - main - INFO - Log level: DEBUG
+2026-08-15 23:54:26,512 - main - INFO - Log date: 20260815
+2026-08-15 23:54:26,756 - main - INFO - Included router: routers.aihub.router
+2026-08-15 23:54:26,811 - main - INFO - Included router: routers.auth.router
+2026-08-15 23:54:26,813 - main - INFO - Included router: routers.health.router
+2026-08-15 23:54:26,900 - main - INFO - Included router: routers.settings.router
+2026-08-15 23:54:27,015 - main - INFO - Included router: routers.storage.router
+2026-08-15 23:54:27,244 - main - INFO - Included router: routers.studio_apps.router
+2026-08-15 23:54:27,249 - main - INFO - Included router: routers.user.router
+2026-08-15 23:54:27,250 - main - INFO - === Application startup initiated ===
+2026-08-15 23:54:27,250 - services.database - INFO - Ignore database initialization
+2026-08-15 23:54:27,250 - services.mock_data - INFO - Ignore initialize data
+2026-08-15 23:54:27,251 - services.auth - INFO - Ignore initialize admin
+2026-08-15 23:54:27,251 - main - INFO - === Application startup completed successfully ===
+2026-08-15 23:59:02,075 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-08-15 23:59:02,075 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-08-15 23:59:02,081 - core.auth - DEBUG - Authentication token validated for user hash: ca68562a
+2026-08-15 23:59:02,353 - core.auth - DEBUG - Authentication token validated for user hash: ca68562a
+2026-08-15 23:59:02,353 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-08-15 23:59:02,354 - core.database - WARNING - Database session maker not available, attempting lazy initialization...
+2026-08-15 23:59:02,354 - core.database - WARNING - Database not initialized, attempting lazy initialization...
+2026-08-15 23:59:02,354 - core.database - INFO - Starting database initialization...
+2026-08-15 23:59:02,354 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-08-15 23:59:02,355 - core.database - INFO - Normalizing database URL for async compatibility...
+2026-08-15 23:59:02,356 - core.database - INFO - Creating async database engine...
+2026-08-15 23:59:02,357 - core.database - INFO - Using QueuePool with connection pooling for non-Lambda environment
+2026-08-15 23:59:02,358 - core.database - INFO - Database engine created successfully
+2026-08-15 23:59:02,358 - core.database - INFO - Creating async session maker...
+2026-08-15 23:59:02,358 - core.database - INFO - Async session maker created successfully
+2026-08-15 23:59:02,358 - core.database - INFO - Database connection initialized successfully
+2026-08-15 23:59:02,358 - core.database - DEBUG - [DB_OP] Starting create_tables
+2026-08-15 23:59:02,359 - core.database - INFO - 🔧 Starting table creation...
+2026-08-15 23:59:03,731 - core.database - INFO - Tables initialized successfully
+2026-08-15 23:59:03,732 - core.database - DEBUG - [DB_OP] Create tables completed in 1.3734s
+2026-08-15 23:59:03,795 - core.database - INFO - Lazy database initialization completed successfully
+2026-08-15 23:59:03,795 - core.database - DEBUG - [DB_OP] Database session created successfully in 1.4421s
+2026-08-15 23:59:03,796 - routers.studio_apps - DEBUG - Querying studio_appss: query=None, sort=-created_at, skip=0, limit=100, fields=None
+2026-08-15 23:59:04,366 - routers.studio_apps - DEBUG - Found 0 studio_appss
+2026-08-15 23:59:04,367 - core.database - DEBUG - [DB_OP] Database session cleanup after 2.0137s
+2026-08-15 23:59:36,772 - core.auth - DEBUG - Authentication token validated for user hash: ca68562a
+2026-08-15 23:59:37,030 - core.auth - DEBUG - Authentication token validated for user hash: ca68562a
+2026-08-15 23:59:37,030 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-08-15 23:59:37,030 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0004s
+2026-08-15 23:59:37,031 - routers.studio_apps - DEBUG - Querying studio_appss: query=None, sort=-created_at, skip=0, limit=100, fields=None
+2026-08-15 23:59:37,407 - routers.studio_apps - DEBUG - Found 0 studio_appss
+2026-08-15 23:59:37,408 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3778s
+2026-08-16 00:02:29,638 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-08-16 00:03:17,734 - dependencies.auth - DEBUG - Authentication required for request GET /api/v1/auth/me
+2026-08-16 00:03:22,538 - core.auth - DEBUG - Authentication token validated for user hash: ca68562a
+2026-08-16 00:03:22,838 - core.auth - DEBUG - Authentication token validated for user hash: ca68562a
+2026-08-16 00:03:22,838 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-08-16 00:03:22,838 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0002s
+2026-08-16 00:03:22,839 - routers.studio_apps - DEBUG - Querying studio_appss: query=None, sort=-created_at, skip=0, limit=100, fields=None
+2026-08-16 00:03:23,043 - core.auth - DEBUG - Authentication token validated for user hash: ca68562a
+2026-08-16 00:03:23,216 - routers.studio_apps - DEBUG - Found 0 studio_appss
+2026-08-16 00:03:23,217 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3783s
+2026-08-16 00:03:23,461 - core.auth - DEBUG - Authentication token validated for user hash: ca68562a
+2026-08-16 00:03:23,461 - core.database - DEBUG - [DB_OP] Starting get_db session creation
+2026-08-16 00:03:23,462 - core.database - DEBUG - [DB_OP] Database session created successfully in 0.0006s
+2026-08-16 00:03:23,462 - routers.studio_apps - DEBUG - Querying studio_appss: query=None, sort=-created_at, skip=0, limit=100, fields=None
+2026-08-16 00:03:23,838 - routers.studio_apps - DEBUG - Found 0 studio_appss
+2026-08-16 00:03:23,839 - core.database - DEBUG - [DB_OP] Database session cleanup after 0.3777s
+2026-08-16 00:03:52,745 - services.database - DEBUG - [DB_OP] Starting database close
+2026-08-16 00:03:52,811 - core.database - INFO - Database connection closed and engine disposed
+2026-08-16 00:03:52,811 - services.database - INFO - Database connections closed
+2026-08-16 00:03:52,812 - services.database - DEBUG - [DB_OP] Database close completed in 0.0662s

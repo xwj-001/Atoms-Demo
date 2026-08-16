@@ -1,0 +1,60 @@
+{
+    "title": "studio_apps",
+    "type": "object",
+    "description": "用户在 Atoms Studio 中生成并保存的应用，含全部历史版本",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "主键，自增"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "所属用户 ID，由系统维护"
+        },
+        "local_id": {
+            "type": "integer",
+            "description": "本地 IndexedDB 中的应用 id，用于同步去重"
+        },
+        "name": {
+            "type": "string",
+            "description": "应用名称"
+        },
+        "description": {
+            "type": "string",
+            "description": "用户输入的原始需求描述"
+        },
+        "style": {
+            "type": "string",
+            "description": "风格标签：minimal / card / dashboard"
+        },
+        "versions_json": {
+            "type": "string",
+            "description": "全部历史版本的 JSON 字符串，元素为 {code, timestamp, changelog}"
+        },
+        "current_version_index": {
+            "type": "integer",
+            "description": "当前生效版本在 versions 中的下标"
+        },
+        "version_count": {
+            "type": "integer",
+            "description": "版本总数，便于列表展示"
+        },
+        "tags": {
+            "type": "string",
+            "description": "标签，逗号分隔"
+        },
+        "is_public": {
+            "type": "boolean",
+            "description": "是否公开到灵感画廊"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "name",
+        "description",
+        "style",
+        "versions_json",
+        "current_version_index"
+    ]
+}
