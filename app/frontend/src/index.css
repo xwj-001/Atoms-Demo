@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Manrope:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Creative workshop: paper-light neutrals tinted toward violet */
+    --background: 264 44% 98%;
+    --foreground: 265 32% 13%;
+
+    --card: 265 40% 99.5%;
+    --card-foreground: 265 32% 13%;
+
+    --popover: 265 40% 99.5%;
+    --popover-foreground: 265 32% 13%;
+
+    --primary: 263 70% 51%;
+    --primary-foreground: 264 60% 99%;
+
+    --secondary: 264 32% 94%;
+    --secondary-foreground: 265 30% 20%;
+
+    --muted: 264 28% 94.5%;
+    --muted-foreground: 265 14% 44%;
+
+    --accent: 264 40% 92%;
+    --accent-foreground: 263 62% 32%;
+
+    --destructive: 355 74% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 264 26% 89%;
+    --input: 264 26% 88%;
+    --ring: 263 70% 51%;
+
+    --warm: 26 92% 58%;
+    --warm-foreground: 26 80% 18%;
+    --mint: 172 62% 40%;
+
+    --radius: 0.85rem;
+
+    --sidebar-background: 264 36% 96.5%;
+    --sidebar-foreground: 265 22% 28%;
+    --sidebar-primary: 263 70% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 264 34% 92%;
+    --sidebar-accent-foreground: 263 62% 32%;
+    --sidebar-border: 264 24% 88%;
+    --sidebar-ring: 263 70% 51%;
+  }
+
+  .dark {
+    --background: 264 30% 8%;
+    --foreground: 264 30% 96%;
+
+    --card: 264 26% 12%;
+    --card-foreground: 264 30% 96%;
+
+    --popover: 264 26% 12%;
+    --popover-foreground: 264 30% 96%;
+
+    --primary: 263 72% 66%;
+    --primary-foreground: 264 40% 10%;
+
+    --secondary: 264 20% 18%;
+    --secondary-foreground: 264 30% 94%;
+
+    --muted: 264 18% 17%;
+    --muted-foreground: 264 14% 66%;
+
+    --accent: 264 22% 22%;
+    --accent-foreground: 264 40% 94%;
+
+    --destructive: 355 62% 46%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 264 18% 22%;
+    --input: 264 18% 24%;
+    --ring: 263 72% 66%;
+
+    --warm: 26 84% 62%;
+    --warm-foreground: 26 40% 12%;
+    --mint: 172 54% 52%;
+
+    --sidebar-background: 264 26% 11%;
+    --sidebar-foreground: 264 20% 88%;
+    --sidebar-primary: 263 72% 66%;
+    --sidebar-primary-foreground: 264 40% 10%;
+    --sidebar-accent: 264 20% 18%;
+    --sidebar-accent-foreground: 264 30% 94%;
+    --sidebar-border: 264 18% 20%;
+    --sidebar-ring: 263 72% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-kerning: normal;
+    text-wrap: pretty;
+    background-image:
+      radial-gradient(58rem 32rem at 6% -6%, hsl(263 84% 88% / 0.55), transparent 60%),
+      radial-gradient(46rem 30rem at 102% 4%, hsl(26 94% 84% / 0.5), transparent 58%),
+      radial-gradient(40rem 28rem at 50% 108%, hsl(172 70% 84% / 0.45), transparent 62%);
+    background-attachment: fixed;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'Bricolage Grotesque', 'Manrope', sans-serif;
+    text-wrap: balance;
+  }
+
+  h1 {
+    @apply text-3xl font-bold leading-tight tracking-tight;
+  }
+
+  h2 {
+    @apply text-xl font-semibold leading-snug;
+  }
+}
+
+@layer components {
+  /* Glassmorphism is the explicitly requested surface language for this studio */
+  .glass {
+    background: hsl(0 0% 100% / 0.62);
+    backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    border: 1px solid hsl(0 0% 100% / 0.72);
+    box-shadow: 0 1px 2px hsl(265 40% 30% / 0.06), 0 12px 32px -18px hsl(265 50% 30% / 0.22);
+  }
+
+  .glass-soft {
+    background: hsl(0 0% 100% / 0.42);
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    border: 1px solid hsl(0 0% 100% / 0.6);
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.stream-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.stream-scroll::-webkit-scrollbar-thumb {
+  background: hsl(263 30% 78%);
+  border-radius: 99px;
+}

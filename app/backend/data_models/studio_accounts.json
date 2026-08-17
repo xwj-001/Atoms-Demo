@@ -1,0 +1,40 @@
+{
+    "title": "studio_accounts",
+    "type": "object",
+    "description": "自建邮箱密码账号表：独立于平台账号体系，存储邮箱、密码哈希与盐值",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "自增主键"
+        },
+        "email": {
+            "type": "string",
+            "description": "登录邮箱，全局唯一，统一小写存储"
+        },
+        "password_hash": {
+            "type": "string",
+            "description": "PBKDF2-HMAC-SHA256 派生的密码哈希（十六进制）"
+        },
+        "password_salt": {
+            "type": "string",
+            "description": "每个账号独立的随机盐值（十六进制）"
+        },
+        "display_name": {
+            "type": "string",
+            "description": "展示昵称，注册时默认取邮箱前缀"
+        },
+        "role": {
+            "type": "string",
+            "description": "角色，默认 user"
+        },
+        "last_login_at": {
+            "type": "string",
+            "description": "最近一次登录时间（ISO 8601 字符串）"
+        }
+    },
+    "required": [
+        "email",
+        "password_hash",
+        "password_salt"
+    ]
+}
